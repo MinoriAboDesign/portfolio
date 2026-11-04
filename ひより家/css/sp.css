@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+/*-------------------------------------------------メディアクエリ：700px以下-------------------------------------------------*/
+@media(max-width: 700px) {
+
+	main {
+		background: url(../image/背景_丸.svg) no-repeat -30px -30px/350px;
+	}
+
+	article {
+		padding: 40px 20px;
+	}
+
+	/*-------------------------------------------------top用-------------------------------------------------*/
+
+	#top {
+		height: 700px;
+		background-position: center bottom;
+	}
+
+	#top #header-in {
+		height: 700px;
+	}
+
+	/*-------------------------------------------------他ページ用-------------------------------------------------*/
+
+	#sp_gnavi_btn {
+		position: fixed;
+		top: 22px;
+		right: 13px;
+		height: 44px;
+		width: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 200;
+	}
+
+	#sp_gnavi_btn span,
+	#sp_gnavi_btn span::before,
+	#sp_gnavi_btn span::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 30px;
+		height: 4px;
+		background-color: #b24a24;
+		transition: all 0.5s;
+		border-radius: 2px;
+	}
+
+	#sp_gnavi_btn span::before {
+		bottom: 10px;
+	}
+
+	#sp_gnavi_btn span::after {
+		top: 10px;
+	}
+
+	#sp_gnavi_check:checked~#sp_gnavi_btn span {
+		background-color: transparent;
+	}
+
+	#sp_gnavi_check:checked~#sp_gnavi_btn span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+
+	#sp_gnavi_check:checked~#sp_gnavi_btn span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	.header ul {
+		position: fixed;
+		top: 110px;
+		right: -100%;
+		padding: 30px 20px;
+		background-color: #191212;
+		box-shadow: 0 0 15px #191212;
+		border-radius: 5px;
+		z-index: 100;
+		transition: all 0.6s;
+		flex-direction: column;
+	}
+
+	.header #reserve {
+		margin: 10px 0;
+		order: 2;
+	}
+
+	#sp_gnavi_check:checked~ul {
+		right: 20px;
+	}
+
+	.now::after {
+		bottom: 22%;
+		left: auto;
+		right: -15px;
+	}
+
+
+	/*-------------------------------------------------ABOUT-------------------------------------------------*/
+	#about {
+		height: 700px;
+		margin: 30px 0 80px;
+		font-size: 18px;
+	}
+
+	#about-img {
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	#about-img ul {
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	#about-img ul:last-child {
+		margin-left: 0;
+	}
+
+	#news {
+		margin: 10px 0 0;
+	}
+
+	/*-------------------------------------------------plan-------------------------------------------------*/
+
+	#plan-flex {
+		flex-direction: column;
+	}
+
+	#plan-li {
+		width: auto;
+		margin-bottom: 50px;
+	}
+
+	.cont_plan {
+		width: auto;
+		padding: 20px 20px 30px;
+	}
+
+	#plan-li .cont_plan:nth-child(even) {
+		margin-left: 0;
+	}
+
+	#plan-li .cont_plan:nth-child(3) {
+		margin-left: 0;
+	}
+
+	.cont_plan h4+p {
+		font-size: 16px;
+	}
+
+	.cont_plan table {
+		font-size: 12px;
+	}
+
+	#option {
+		width: auto;
+	}
+
+	#option li {
+		padding: 10px 10px 40px;
+	}
+
+	#option li h5 {
+		font-size: 16px;
+	}
+
+
+	/*-------------------------------------------------meal-------------------------------------------------*/
+
+	#meal h4 {
+		font-size: 26px;
+	}
+
+	#irori-flex {
+		flex-direction: column;
+	}
+
+	#irori-flex p {
+		font-size: 16px;
+		width: auto;
+		margin-bottom: 20px;
+	}
+
+	#irori-flex img {
+		width: auto;
+	}
+
+	#menu div {
+		margin: 0 15px;
+		display: flex;
+		justify-content: right;
+	}
+
+	#menu dl {
+		margin: 0 0 50px;
+	}
+
+	/*-------------------------------------------------room-------------------------------------------------*/
+
+	#room #room_img {
+		flex-direction: column;
+	}
+
+	#room #room_img>div ul:last-child {
+		margin-bottom: 0;
+	}
+
+	#room #room_img #sakura {
+		width: auto;
+	}
+
+	#room #room_img #sakura img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		object-position: right 15%;
+	}
+
+	#room_text {
+		flex-direction: column;
+	}
+
+	#room_text div {
+		width: auto;
+	}
+
+	#room_text dl {
+		width: auto;
+		border-top: 1px solid #b24a24;
+		margin: 30px 0 0 30px;
+		padding: 30px 20px 20px 30px;
+	}
+
+	#room_text dt {
+		font-size: 18px;
+		margin-bottom: 7px;
+		background: linear-gradient(to right, #f0e9e9, #f0e9e900);
+		padding: 3px 10px 7px;
+	}
+
+	#room_text dd {
+		padding-left: 10px;
+		font-size: 14px;
+		font-family: serif;
+		line-height: 1.7;
+		margin-bottom: 20px;
+	}
+
+	#room_text dd:last-child {
+		margin-bottom: 0;
+	}
+
+	/*-------------------------------------------------access-------------------------------------------------*/
+
+	#room_flex {
+		flex-direction: column;
+	}
+
+	#room_flex #map iframe {
+		height: 300px;
+		width: 100%;
+	}
+
+	/*-------------------------------------------------reserve-------------------------------------------------*/
+
+	#form form input[type=text],
+	#form form input[type=mail] {
+		width: 99%;
+	}
+
+
+	/*-------------------------------------------------footer-------------------------------------------------*/
+	#footer-in {
+		flex-direction: column;
+	}
+
+	#footer-R {
+		margin-bottom: 50px
+	}
+
+	#footer-R {
+		text-align: center;
+	}
+
+	#footer-R nav ul {
+		justify-content: center;
+		gap: 20px;
+		padding-right: 0;
+	}
+
+	#footer-L {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+}
+
+
+
+
+/*-------------------------------------------------メディアクエリ：500px以下-------------------------------------------------*/
+@media(max-width: 500px) {}
