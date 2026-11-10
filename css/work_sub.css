@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+.slick-list {
+  max-height: 80vh;
+}
+
+body {
+  background-color: #ccecff;
+}
+
+.work_sub>div {
+  background: url(../image/work_sub_bg.svg) no-repeat left top/800px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px 70px 60px 30px;
+}
+
+.work-visu {
+  max-width: 450px;
+  margin: 0 auto 60px;
+}
+
+.work-text {
+  line-height: 1.7;
+}
+
+.work-text li {
+  list-style-type: "〇";
+  margin: 5px 0 5px 1em;
+
+}
+
+.work-text dl {
+  border-bottom: 1px solid #4d4d4d;
+  padding-bottom: 30px;
+}
+
+.work-text dt {
+  background-color: #ffffffd7;
+  border-radius: 50px;
+  padding: 7px 15px 3px;
+  margin-bottom: 10px;
+}
+
+.work-text dt:nth-child(n+2) {
+  margin-top: 13px;
+}
+
+.work-text dt::before {
+  vertical-align: -0.12em;
+  margin-right: 8px;
+}
+
+.work-text dt:nth-child(1):before {
+  content: url(../image/work_irainusi.png)
+}
+
+.work-text dt:nth-child(3):before {
+  content: url(../image/work_siyou.png)
+}
+
+.work-text dt:nth-child(5):before {
+  content: url(../image/work_youbou.png)
+}
+
+.work-text dd {
+  padding: 0 15px;
+}
+
+.work-point {
+  padding: 30px 15px;
+}
+
+.work-point p {
+  margin-bottom: 10px;
+}
+
+.jump {
+  display: block;
+  width: 130px;
+  height: 190px;
+  margin: 0 auto;
+  background: url(../image/jump.svg) no-repeat center;
+  transition-duration: 0.3s;
+}
+
+.jump:hover {
+  background: url(../image/jump_hover.svg) no-repeat center;
+}
+
+#back {
+  background: url(../image/back.svg) no-repeat bottom right/100%;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 20px;
+  right: -35px;
+  transition-duration: 0.3s;
+}
+
+#back:hover {
+  right: -0;
+}
+
+/*-------------------------------------------------メディアクエリ：900px以上-------------------------------------------------*/
+@media screen and (min-width:900px) {
+
+  .work-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .work-visu {
+    width: 55%;
+  }
+
+  .work-text {
+    width: 42%;
+  }
+
+
+}
+
+
+/*-------------------------------------------------メディアクエリ：500px以下-------------------------------------------------*/
+@media screen and (max-width:500px) {
+
+  h4 {
+    font-size: 20px;
+  }
+
+}
