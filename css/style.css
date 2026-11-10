@@ -1,0 +1,370 @@
+@charset "UTF-8";
+
+html{
+	scroll-behavior: smooth;
+	scroll-padding-top: 20px;
+}
+
+
+body{
+	font-family: "SUSE","Noto Sans JP",sans-serif;	
+	color:#4d4d4d;
+	font-size:14px;
+}
+
+img{
+	max-width:100%;
+	vertical-align:bottom;
+}
+
+.wrapper{
+	max-width:1200px;
+	margin:0 auto;
+	padding:0 3%;
+}
+
+h2{
+	height:40px;
+	margin-bottom:30px;
+	width: 20%;
+}
+
+p{
+    text-align: justify;
+}
+
+
+
+
+/*-------------------------------------------------ヘッダー-------------------------------------------------*/
+header{
+	height:100vh;
+	margin-bottom:100px;
+}
+#mainvisual{
+	height:75%;
+	text-align:center;
+}
+#mainvisual img{
+	height:100%;
+	object-fit:cover;
+}
+#header-nav{
+	height: 25%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+header h1{
+	font-size:42px;
+	margin-left:100px;
+	position:relative;
+	letter-spacing: 0.03em;
+}
+header h1::before{
+	content:"";
+	width:140px;
+	height:1px;
+	background-color:#4d4d4d;
+	position:absolute;
+	top:0.65em;
+	left:-160px;
+}
+header ul{
+	border: 2px solid #4d4d4d;
+	border-radius: 40px;
+	display: flex;
+	overflow: hidden;
+}
+header li a{
+	display: inline-block;
+	padding:5px 20px;
+	transition:all 0.5s;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	font-size: 20px;
+}
+header li a:hover{
+	background:url(../image/underline_blue.svg) repeat-x left bottom/60px;
+	border: 1px solid #4d4d4d;
+}
+
+/*-------------------------------------------------PROFILE-------------------------------------------------*/
+#PROFILE{
+	display:flex;
+	margin-bottom:150px;
+}
+#pro-in{
+	display:flex;
+	align-items: center;
+	gap: 20px;
+	width: 70%;
+}
+#PROFILE-text{
+	width:60%;
+	margin:20px 1% 0 3%;
+	line-height: 1.5;
+}
+#PROFILE-text h3{
+	font-size:18px;
+	margin-bottom:15px;
+}
+#PROFILE-text p{
+	margin-bottom:10px;
+}
+#PROFILE-image{
+	width:170px;
+	margin-top:20px;
+}
+
+/*-------------------------------------------------WORK-------------------------------------------------*/
+#WORK{
+	display:flex;
+	flex-direction:row-reverse;
+	margin-bottom:150px;
+}
+#tile{
+	display:flex;
+	flex-wrap:wrap;
+	gap: 30px; 
+	width:65%;	
+	margin:20px 0 0;
+}
+#tile li{
+	width:calc(30% - (60px / 3));
+	border:3px solid #4d4d4d;
+	border-radius:10px;
+	position:relative;
+	overflow: hidden;
+	box-shadow:-10px 10px #d9f1ff;
+	transition:box-shadow 0.5s;
+}
+#tile li:hover{
+	box-shadow:-10px 10px #8ecaeb;
+}
+#tile li:active{
+	transform:translate(-10px,10px);
+	box-shadow:none;
+	transition:none;
+}
+#tile li p{	
+	font-family: "Noto Sans JP",sans-serif;	
+	font-size: 12px;
+	line-height: 2.5;
+	width:100%;
+	text-align:center;
+	background-color:rgba(255,255,255,0.9);
+	position:absolute;
+	bottom:0;
+	left: 0;
+	border-top: 2px solid #4d4d4d;
+}
+
+.u_line{
+	border-top: 1px solid #4d4d4d;
+	padding:6px 15px;
+}
+
+/*-------------------------------------------------帯-------------------------------------------------*/
+#dummy{
+	margin-bottom:100px;
+	height: 300px;
+	background: url(../image/obi.svg) repeat-x center top/cover;
+}
+
+/*-------------------------------------------------CONTACT-------------------------------------------------*/
+#CONTACT{
+	max-width:600px;
+	margin:0 auto 150px;
+	background-image:url(../image/contact_top.svg),url(../image/contact_bottom.svg);
+	background-repeat:no-repeat,no-repeat;
+	background-position:center top,center bottom;
+	background-size: contain;
+	padding:60px 50px 40px;
+}
+#CONTACT h2{
+	width:auto;
+}
+#CONTACT form{
+	padding:0 20px;
+	font-size:16px;
+}
+#CONTACT p{
+	margin-bottom:20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+	border:1px solid #4d4d4d;
+	border-radius:4px;
+	padding:5px;
+	margin-top:5px;
+	width:100%;
+}
+textarea{
+	height:150px;
+}
+input[type="submit"]{
+	border:1px solid #4d4d4d;
+	border-radius:4px;
+	padding:10px 25px;
+	font-size:18px;
+	transition-duration:0.5s;
+}
+input[type="submit"]:hover{
+	background:url(../image/underline_blue.svg) repeat-x left bottom/60%;
+}
+#submit{
+	text-align:center;
+}
+
+/*-------------------------------------------------ページトップへ-------------------------------------------------*/
+#pagetop{
+	background: url(../image/pagetop.svg) no-repeat bottom right/100%;
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	bottom: 0;
+	right: -42px;
+	transition-duration: 0.3s;
+}
+
+#pagetop:hover{
+	right: -0;
+}
+
+/*-------------------------------------------------フッター-------------------------------------------------*/
+footer {
+  padding: 50px 0;
+  background-color: #ccecff;
+}
+
+
+footer p{
+	text-align: center;
+}
+
+
+
+
+
+
+/*-------------------------------------------------メディアクエリ：900px以下-------------------------------------------------*/
+@media screen and (max-width:900px){
+
+.wrapper{
+	max-width:auto;
+	margin:0;
+}
+
+h2{
+	height:40px;
+	width:auto;
+}
+
+/*-------------------------------------------------ヘッダー-------------------------------------------------*/
+#header-nav{
+	flex-direction: column;
+	justify-content: center;
+	gap: 8%;
+}
+header h1{
+	margin-left: 0;
+	text-align: center;
+}
+header h1::before{
+	content:none;
+}
+
+/*-------------------------------------------------PROFILE-------------------------------------------------*/
+#PROFILE{
+	flex-direction: column;
+}
+#pro-in{
+	width: 100%;
+}
+
+
+
+/*-------------------------------------------------WORK-------------------------------------------------*/
+#WORK{
+	flex-direction: column;
+	text-align: right;
+}
+#tile{
+	width:80%;	
+	margin:20px 3% 0 17%;
+}
+#tile li{
+	width: calc(50% - 15px);
+}
+
+/*-------------------------------------------------CONTACT-------------------------------------------------*/
+#CONTACT{
+	max-width:450px;
+	background-image:url(../image/contact_top_sp.svg),url(../image/contact_bottom_sp.svg);
+	background-size: contain;
+	padding:60px 50px 40px;
+}
+#CONTACT form{
+	padding:0 3%;
+}
+
+}
+
+
+
+/*-------------------------------------------------メディアクエリ：600px以下-------------------------------------------------*/
+@media screen and (max-width:600px){
+
+
+/*-------------------------------------------------PROFILE-------------------------------------------------*/
+#pro-in{
+	flex-direction: column-reverse;
+	width: auto;
+}
+#PROFILE-text{
+	width: auto;
+	margin:20px 7px 0;
+}
+#PROFILE-image{
+	width: 250px;
+	height: 250px;
+	border: 2px solid #4d4d4d;
+	border-radius: 50%;
+	margin:0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#PROFILE-image img{
+	height: 200px;
+}
+
+/*-------------------------------------------------WORK-------------------------------------------------*/
+#tile{
+	width:auto;	
+}
+#tile li{
+	width: 80%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
